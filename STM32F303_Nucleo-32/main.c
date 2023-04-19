@@ -1,74 +1,64 @@
-/*
- * arm-none-eabi-gcc -mcpu=cortex-m4 main.c -c
- * arm-none-eabi-objdump -h main.o
- * arm-none-eabi-gcc -T link.ld -nostdlib main.o -o firmware.elf
- * arm-none-eabi-objdump -h firmware.elf
- * arm-none-eabi-objcopy -O binary firmware.elf firmware.bin
- * st-flash --reset write firmware.bin 0x8000000
- */
+/**
+  ******************************************************************************
+  * @file           : main.c
+  * @brief          : Main program body
+  ******************************************************************************
+  * @attention
+  *
+  ******************************************************************************
+  */
 
+/* USER CODE BEGIN Includes */
 #include <stdint.h>
 
-/*-- GPIO Addressing p.237 --*/
-// GPIOA p.57 0x4800 0000 - 0x4800 03FF 1 K
-#define GPIOA_BASE 0x48000000UL
+
+/*-- Timer ! --*/
+#define F_CPU 8000000UL // STM32F303x6x8 p.17
+#define TIM1_BASE // TIM1  0x4001 2C00 - 0x4001 2FFF 	RM0316_Reference_manual p.58
+#define TIM1_PSC (volatile uint32_t *)(TIM1_BASE + 0x00000028) // RM0316_Reference_manual p.586
+
+
+/*-- RESET and Clock Control RSS --*/
+#define RCC_BASE 0x40021000UL // RSS 0x40021000 - 0x400213FF 	RM0316_Reference_manual p.57
+// AHBENR; 		!<peripheral clock enable register 			 	   Address offset: 0x14
+#define RCC_AHBENR (volatile uint32_t *)(RCC_BASE + 0x00000014) // RM0316_Reference_manual p.148
+
+
+/*-- GPIO --*/
+#define GPIOA_BASE 0x48000000UL // GPIOA p.57 0x4800 0000 - 0x4800 03FF 1 K
 // MODER;        !< GPIO port mode register,               Address offset: 0x00
-#define GPIOA_MODER (*((volatile uint32_t *)(GPIOA_BASE + 0x00000000)))
+#define GPIOA_MODER (volatile uint32_t *)(GPIOA_BASE + 0x00000000)
 // OTYPER;       !< GPIO port output type register,        Address offset: 0x
 // OSPEEDR;      !< GPIO port output speed register,       Address offset: 0x
 // PUPDR;        !< GPIO port pull-up/pull-down register,  Address offset: 0x
 // IDR;          !< GPIO port input data register,         Address offset: 0x
 // ODR;          !< GPIO port output data register,        Address offset: 0x14
-#define GPIOA_ODR (*((volatile uint32_t *)(GPIOA_BASE + 0x00000014)))
+#define GPIOA_ODR (volatile uint32_t *)(GPIOA_BASE + 0x00000014)))
 // BSRR;         !< GPIO port bit set/reset register,      Address offset: 0x18
-#define GPIOA_BSRR (*((volatile uint32_t *)(GPIOA_BASE + 0x00000018)))
+#define GPIOA_BSRR (volatile uint32_t *)(GPIOA_BASE + 0x00000018) // RM0316_Reference_manual p.240
 // LCKR;         !< GPIO port configuration lock register, Address offset: 0x
 // AFR[2];       !< GPIO alternate function registers,     Address offset: 0x
-// BRR;          !< GPIO bit reset register,               Address offset: 0
+// BRR;          !< GPIO bit reset register,               Address offset: 0x
+/* USER CODE END Includes */
 
 int main(void)
 {
-    /*-- Setup --*/
-    // Clear Moder - A0-A15 to 0 (input mode)
-    GPIOA_MODER = 0x00000000;
+	/*-- Setup --*/
+	// Bit 17 IOPAEN: I/O port A clock enable	RM0316_Reference_manual p.149
+		// ! <1 =  I/O port A clock enabled
+	*RCC_AHBENR = (uint32_t)(1 << 17);
 
-    // set PA1 (Pin 1) (p.237 MODER4[1:0]) to Output (01)
-    GPIOA_MODER = GPIOA_MODER | (1 << 0);
-    GPIOA_MODER = GPIOA_MODER | (1 << 2);
-    GPIOA_MODER = GPIOA_MODER | (1 << 4);
-    GPIOA_MODER = GPIOA_MODER | (1 << 6);
+	// Clear Moder - A0-A15 to 0 (input mode)
+	*GPIOA_MODER = 0;
+	*GPIOA_BSRR = 0;
 
-    // Clear GPIOA_ODR p.239
-    // GPIOA_ODR = 0x00000000;
+	// set PA1 (Pin 1) (p.237 MODER4[1:0]) to Output (01)
+	*GPIOA_MODER |= (uint32_t)(1 << 2);
 
-    while (1)
-    {
-        // Set PA1 to HIGH
-        GPIOA_BSRR |= (1 << 0);
-        GPIOA_BSRR |= (1 << 1);
-        GPIOA_BSRR |= (1 << 2);
-        GPIOA_BSRR |= (1 << 3);
-    }
-    return 0;
+	while (1)
+	{
+		// Set PA1 to HIGH
+		*GPIOA_BSRR |= (uint32_t)(1 << 1);
+	}
 }
 
-// Startup code
-__attribute__((naked, noreturn)) void _reset(void)
-{
-    // memset .bss to zero, and copy .data section to RAM region
-    extern long _sbss, _ebss, _sdata, _edata, _sidata;
-    for (long *src = &_sbss; src < &_ebss; src++)
-        *src = 0;
-    for (long *src = &_sdata, *dst = &_sidata; src < &_edata;)
-        *src++ = *dst++;
-
-    main(); // Call main()
-    for (;;)
-        (void)0; // Infinite loop in the case if main() returns
-}
-
-extern void _estack(void); // Defined in link.ld
-
-// 16 standard and 80 (p.289) STM32-specific handlers
-__attribute__((section(".vectors"))) void (*tab[16 + 80])(void) = {_estack,
-                                                                   _reset};
