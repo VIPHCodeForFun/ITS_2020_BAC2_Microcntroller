@@ -1,3 +1,0 @@
-Layer Pairs Export File for PCB: ATmega328PB_Xplained_Mini.PcbDoc
-LayersSetName=Top_Bot_Thru_Holes|DrillFile=atmega328pb_xplained_mini-roundholes.txt|DrillLayers=gtl,gp1,gp2,gbl
-LayersSetName=Top_Bot_Slot_Holes|DrillFile=atmega328pb_xplained_mini-slotholes.txt|DrillLayers=gtl,gp1,gp2,gbl

@@ -1,0 +1,52 @@
+Designator Footprint               Mid X         Mid Y         Ref X         Ref Y         Pad X         Pad Y TB      Rotation Comment        
+
+R211       AP2-00000             22.98mm      23.309mm       22.98mm      23.309mm       22.98mm      22.709mm  T         90.00 R2             
+R210       AP2-00000           21.8397mm      23.309mm     21.8397mm      23.309mm     21.8397mm      22.709mm  T         90.00 R2             
+U200       AP6-00155              29.5mm        26.3mm        29.5mm        26.3mm      32.025mm       24.55mm  T        180.00 ATmega_48PB_88PB_168PB_328PB_32Pin_MLF
+J101       AP8-00851                30mm      71.875mm          30mm      73.375mm        31.3mm        70.7mm  T        180.00 2,000 pieces per reel
+C106       AP1-00038            23.475mm       44.25mm      23.475mm      43.725mm      23.475mm      43.725mm  T        180.00 CAP-NONPOL     
+R118       AP2-00000             34.95mm        42.2mm       34.95mm        42.2mm       34.35mm        42.2mm  T        360.00 R2             
+R209       AP2-00000             23.45mm        10.3mm       23.45mm        10.3mm       22.85mm        10.3mm  T        360.00 R2             
+R117       AP2-00000             22.85mm      50.975mm       22.85mm      50.975mm       22.25mm      50.975mm  T        360.00 R2             
+R114       AP2-00000              29.8mm        39.1mm        29.8mm        39.1mm        29.8mm        38.5mm  T         90.00 R2             
+R113       AP2-00000           36.1576mm     51.1578mm     36.1576mm     51.1578mm     35.5576mm     51.1578mm  T        360.00 R2             
+R112       AP2-00000           36.1576mm     52.3078mm     36.1576mm     52.3078mm     35.5576mm     52.3078mm  T        360.00 R2             
+R111       AP2-00000           36.1576mm     53.4578mm     36.1576mm     53.4578mm     35.5576mm     53.4578mm  T        360.00 R2             
+R110       AP2-00000           36.1576mm     50.0078mm     36.1576mm     50.0078mm     35.5576mm     50.0078mm  T        360.00 R2             
+R109       AP2-00000              31.3mm        39.1mm        31.3mm        39.1mm        31.3mm        38.5mm  T         90.00 R2             
+R108       AP2-00000            19.625mm       40.55mm      19.625mm       40.55mm      19.625mm       41.15mm  T        270.00 R2             
+R107       AP2-00000            20.875mm        41.3mm      20.875mm        41.3mm      20.875mm        41.9mm  T        270.00 R2             
+D100       AP4-00013            28.225mm       36.75mm      28.225mm       36.75mm      29.275mm       36.75mm  T        180.00 LED_12         
+C204       AP1-00001             20.85mm        10.3mm       20.85mm        10.3mm        20.3mm        10.3mm  T        360.00 CAP-NONPOL     
+C203       AP1-00001             24.31mm        26.4mm       24.31mm        26.4mm       23.76mm        26.4mm  T        360.00 CAP-NONPOL     
+C108       AP1-00001             22.85mm        49.8mm       22.85mm        49.8mm        23.4mm        49.8mm  T        180.00 CAP-NONPOL     
+LABEL1     AP8-00317           -164.08mm     -142.48mm       38.21mm        9.45mm     -164.08mm     -142.48mm  B        180.00 PCBA_LABEL     
+C101       AP1-00001            34.225mm      49.025mm      34.225mm      49.025mm      34.225mm      48.475mm  T         90.00 CAP-NONPOL     
+C102       AP1-00001             34.25mm       44.05mm       34.25mm       44.05mm       34.25mm        43.5mm  T         90.00 CAP-NONPOL     
+C103       AP1-00001             28.95mm       52.75mm       28.95mm       52.75mm       28.95mm        53.3mm  T        270.00 CAP-NONPOL     
+C104       AP1-00001            24.775mm       48.15mm      24.775mm       48.15mm      24.775mm        48.7mm  T        270.00 CAP-NONPOL     
+C105       AP1-00038            23.475mm      46.375mm      23.475mm       45.85mm      23.475mm       45.85mm  T        180.00 CAP-NONPOL     
+C107       AP1-00001             26.95mm      41.875mm       26.95mm      41.875mm        26.4mm      41.875mm  T        360.00 CAP-NONPOL     
+C200       AP1-00001             34.51mm        26.1mm       34.51mm        26.1mm       35.06mm        26.1mm  T        180.00 CAP-NONPOL     
+C201       AP1-00001             34.51mm       27.35mm       34.51mm       27.35mm       35.06mm       27.35mm  T        180.00 CAP-NONPOL     
+C202       AP1-00001             24.68mm       28.55mm       24.68mm       28.55mm       24.68mm        29.1mm  T        270.00 CAP-NONPOL     
+D200       AP4-00013             31.75mm       1.775mm       31.75mm       1.775mm        30.7mm       1.775mm  T        360.00 LED_12         
+Q101       AP5-00002            23.935mm       35.62mm      23.935mm       35.62mm      22.885mm       36.57mm  T        360.00 MOSFET_P_GSD   
+Q102       AP5-00002            23.935mm       39.12mm      23.935mm       39.12mm      24.985mm       38.17mm  T        180.00 MOSFET_N_GSD   
+R301       AP2-00000              34.5mm        63.1mm        34.5mm        63.1mm        34.5mm        63.7mm  T        270.00 R2             
+R101       AP2-00000             31.35mm       52.75mm       31.35mm       52.75mm       31.35mm       53.35mm  T        270.00 R2             
+R102       AP2-00000              30.2mm       52.75mm        30.2mm       52.75mm        30.2mm       53.35mm  T        270.00 R2             
+R103       AP2-00000            27.025mm         6.8mm      27.025mm         6.8mm      27.025mm         7.4mm  T        270.00 R2             
+R104       AP2-00000            26.625mm      39.425mm      26.625mm      39.425mm      26.625mm      38.825mm  T         90.00 R2             
+R105       AP2-00000            21.375mm      36.975mm      21.375mm      36.975mm      21.375mm      37.575mm  T        270.00 R2             
+R200       AP2-00000            34.417mm       2.032mm      34.417mm       2.032mm      34.417mm       1.432mm  T         90.00 R2             
+SW200      AP8-00137            22.125mm       5.275mm      22.125mm       5.275mm      20.125mm       2.525mm  T         90.00 Can be ordered in low volumes from Mouser
+XC100      AP7-00061                21mm     45.3998mm          21mm        45.4mm        21.8mm     44.2998mm  T         90.00 TSX-3225       
+U100       AP6-00375              29.5mm        46.6mm        29.5mm        46.6mm          32mm      50.025mm  T        270.00 ATmega32U4 QFN 
+C302       AP1-00008             29.75mm        59.7mm       29.75mm        59.7mm      28.375mm        59.7mm  T        360.00 Farnell no.: 1833806
+C301       AP1-00001             28.88mm      65.746mm       28.88mm      65.746mm       28.33mm      65.746mm  T        360.00 CAP-NONPOL     
+C300       AP1-00002           32.4358mm     63.1806mm     32.4358mm     63.1806mm     32.4358mm     62.3806mm  T         90.00 Farnell no.: 1833806
+F100       AP2-00002              33.4mm        68.5mm        33.4mm        68.5mm       32.45mm        68.5mm  T        360.00 Farnell no: 1861197
+U300       AP6-00087           29.6926mm     63.3838mm     29.6926mm     63.3838mm     30.9176mm     62.4308mm  T        180.00 VOLTREG7       
+R300       AP2-00000              12.2mm       54.15mm        12.2mm       54.15mm        12.8mm       54.15mm  T        180.00 R2             
+
