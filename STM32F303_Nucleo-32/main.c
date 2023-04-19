@@ -33,7 +33,7 @@
 // PUPDR;        !< GPIO port pull-up/pull-down register,  Address offset: 0x
 // IDR;          !< GPIO port input data register,         Address offset: 0x
 // ODR;          !< GPIO port output data register,        Address offset: 0x14
-#define GPIOA_ODR (volatile uint32_t *)(GPIOA_BASE + 0x00000014)))
+#define GPIOA_ODR (volatile uint32_t *)(GPIOA_BASE + 0x00000014)
 // BSRR;         !< GPIO port bit set/reset register,      Address offset: 0x18
 #define GPIOA_BSRR (volatile uint32_t *)(GPIOA_BASE + 0x00000018) // RM0316_Reference_manual p.240
 // LCKR;         !< GPIO port configuration lock register, Address offset: 0x
