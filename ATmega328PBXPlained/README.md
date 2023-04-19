@@ -5,3 +5,6 @@ Für den ATmega328PB wird MicrochipStudio unter Windows verwendet.
 
 # Toolchain läuft nicht unter Linux 
 
+Lösung:
+Im MakeFile anstelle von "-c jtag3" soll "-c xplainedmini" beim avrdude verwenden!
+ 
