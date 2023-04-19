@@ -1,9 +1,8 @@
 /*
  * Philipp Vidmar
  * https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
- * https://www.youtube.com/watch?v=j4xw8QomkXs&t=312s
+ *  https://www.youtube.com/watch?v=j4xw8QomkXs&t=312s
  */
-
 /* Dieser Code verwendet die AVR-Library avr/io.h, um auf die Register des Mikrocontrollers zuzugreifen. */
 #include <avr/io.h>
 /* Die Funktion _delay_ms(1000) ist eine Funktion aus der util/delay.h-Bibliothek, die eine Pause von einer */
