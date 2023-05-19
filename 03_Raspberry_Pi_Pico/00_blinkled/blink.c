@@ -12,8 +12,7 @@
 int main(void)
 {
     // Setup GPIO
-    // Disable reset status GPIO
-    clearReset(IO_BANK0);
+    clearReset(IO_BANK0); // Disable reset status GPIO
 
     // Pin 0 to outputpin
     UINT32_T_CLR(GPIO0_CTRL, GPIO_FUNC_NULL); // Clear reset value null
@@ -21,7 +20,7 @@ int main(void)
     BIT_SET(GPIO_OE, PIN0);                   // Output enable registers 1 for drive high/low based on GPIO_OUT
 
     // Setup Timer
-    // clearReset(TIMER);
+    clearReset(TIMER); // Disable reset status GPIO
 
     while (1)
     {
