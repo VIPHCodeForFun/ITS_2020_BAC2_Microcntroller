@@ -1,10 +1,10 @@
-Für den ATmega328PB wird MicrochipStudio unter Windows verwendet.
+In diesem Kapitel wird darauf eingegangen wie die Aufgabenstellungen am ATmega328PB XPlained umgesetzt wurden
 
-# Code läuft in MicrochipStudio
-! Fehler F_CPU = 16 Hz nicht 8 Hz
+#Windows
+	MicrochipStudio unter Windows verwendet.
+	
 
-# Toolchain läuft nicht unter Linux 
-
-Lösung:
-Im MakeFile anstelle von "-c jtag3" soll "-c xplainedmini" beim avrdude verwenden!
+#Linux 
+	
+	Im MakeFile anstelle von "-c jtag3" soll "-c xplainedmini" beim avrdude verwenden!
  
