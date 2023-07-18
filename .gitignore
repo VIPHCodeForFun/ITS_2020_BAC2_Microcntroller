@@ -1,0 +1,8 @@
+# Ignoriere VS-Code Dateien
+.vscode
+
+# Ignoriere formatierungs Dateien 
+.clang-format
+
+# Ignoriere ausführbare Dateien
+*.exe
