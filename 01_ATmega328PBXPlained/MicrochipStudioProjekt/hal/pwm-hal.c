@@ -9,8 +9,8 @@
 
 void setupPWM(){
 	// Data Direction Register (DDR) bit corresponding to the OC0A pin must be set in order to enable the output driver
-	// PD6 (Timer/Counter0 Output Compare Match A Output) p.98
-	setupModeIO(PIND6, OUTPUT);
+	// PD6 = 22 (Timer/Counter0 Output Compare Match A Output) p.98
+	setupModeIO(22, OUTPUT); 
 	// Writing the TCCR0A.COM0x[1:0] bits to 0x2 will produce a non-inverted PWM;
 	BIT_SET(TCCR0A, 7); // COM0A1
 
@@ -19,7 +19,7 @@ void setupPWM(){
 	BIT_SET(TCCR0A, 1); // WGM01
 
 	/* Compare match */
-	*OCR0A = 128;
+	OCR0A = 128;
 	
 	/* Prescaler 1024 p.128 */
 	/* 16 000 000 HZ / 1204 = 15525 Hz	 */
@@ -30,5 +30,5 @@ void setupPWM(){
 }
 
 void updatePWM(uint8_t value){
-	*OCR0A = value;
+	OCR0A = value;
 }

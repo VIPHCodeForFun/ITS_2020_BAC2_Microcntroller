@@ -9,9 +9,9 @@
 #define IOHAL_H_
 
 #include <stdint.h>
+#include <avr/io.h>
 
 #include "../define/bit.h"
-#include "../define/pin-define.h"
 
 #define OUTPUT (uint8_t) 1
 

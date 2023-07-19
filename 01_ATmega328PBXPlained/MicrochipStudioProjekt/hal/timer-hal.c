@@ -5,6 +5,8 @@
  *  Author: Philipp Vidmar
  */
 
+#include <avr/io.h>
+
 #include "timer-hal.h"
 
 void setupTime(){
@@ -20,7 +22,7 @@ void setupTime(){
 	BIT_SET(TCCR2B, 2); // p.197 CA22
 
 	// Compare Value = 2000us / 8 = 250 (We use 249, because 0 is also a value)
-	*OCR2A = 249;
+	OCR2A = 249;
 
 	/* enable Timer Interrupt */
 	BIT_SET(TIMSK2, 1); // p.200 OCIE2A
@@ -32,7 +34,7 @@ uint32_t milliSeconds(){
 
 	ATOMIC_BLOCK(ATOMIC_RESTORESTATE){
 		currentTimerCounter = TIME_COUNTER;
-		currentTimerValue = *TCNT2;
+		currentTimerValue = TCNT2;
 	}
 	/* timecounter 1 = 2 milliSekonds ------> (*2) */
 	currentTimerCounter = currentTimerCounter * 2; // mSekonds

@@ -1,9 +1,10 @@
 /*
- * ioHAL.c
+ * pin-hal.c
  *
  * Created: 28.06.2023 15:21:48
  *  Author: Philipp Vidmar
  */ 
+
 #include "pin-hal.h"
 
 void setupModeIO(uint8_t pin, uint8_t mode){

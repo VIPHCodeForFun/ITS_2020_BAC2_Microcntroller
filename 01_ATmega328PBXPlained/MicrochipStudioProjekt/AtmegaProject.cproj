@@ -137,15 +137,6 @@
     <Compile Include="define\bit.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="define\pin-define.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="define\pwm-define.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="define\timer-define.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="hal\pin-hal.c">
       <SubType>compile</SubType>
     </Compile>

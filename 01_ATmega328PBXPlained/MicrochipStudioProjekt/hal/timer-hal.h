@@ -5,15 +5,14 @@
  *  Author: Philipp Vidmar
  */ 
 
-
 #ifndef TIMER_HAL_H_
 #define TIMER_HAL_H_
 
 #include <stdint.h> // uintx_t
+#include <avr/io.h>
 #include <util/atomic.h>
 #include <avr/interrupt.h>
 #include "../define/bit.h"
-#include "../define/timer-define.h"
 
 /**/
 volatile uint32_t TIME_COUNTER;

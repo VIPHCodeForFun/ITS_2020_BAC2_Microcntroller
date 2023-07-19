@@ -8,6 +8,8 @@
 #include "hal/timer-hal.h"
 #include "hal/pwm-hal.h"
 
+#define  PIN 22
+
 int main(void){
 	/* Bootsection */
 	setupPWM();

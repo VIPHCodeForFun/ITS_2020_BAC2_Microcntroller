@@ -8,17 +8,19 @@
 #include "hal/timer-hal.h"
 #include "hal/pin-hal.h"
 
+#define  PIN 22
+
 int main(void){
 	/* Bootsection */
-	setupModeIO(PIND6 , OUTPUT);
+	setupModeIO(PIN , OUTPUT);
 	setupTime();
 	sei();
 	
 	/* Programmsection */
 	while(1){
-		setPin(PIND6);
+		setPin(PIN);
 		delayMilliSeconds(1000);
-		clearPin(PIND6);
+		clearPin(PIN);
 		delayMilliSeconds(1000);
 	}
 }

@@ -1,0 +1,477 @@
+
+AtmegaProject.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000334  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000002c0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  00800100  00800100  00000334  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000334  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000364  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000b0  00000000  00000000  000003a4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000dbc  00000000  00000000  00000454  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000b94  00000000  00000000  00001210  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000006e5  00000000  00000000  00001da4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000124  00000000  00000000  0000248c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000005d2  00000000  00000000  000025b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000365  00000000  00000000  00002b82  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000088  00000000  00000000  00002ee7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 5a 00 	jmp	0xb4	; 0xb4 <__ctors_end>
+   4:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+   8:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+   c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  10:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  14:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  18:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  1c:	0c 94 21 01 	jmp	0x242	; 0x242 <__vector_7>
+  20:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  24:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  28:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  2c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  30:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  34:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  38:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  3c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  40:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  44:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  48:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  4c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  50:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  54:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  58:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  5c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  60:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  64:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  68:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  6c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  70:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  74:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  78:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  7c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  80:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  84:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  88:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  8c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  90:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  94:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  98:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  9c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  a0:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  a4:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  a8:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  ac:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  b0:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+
+000000b4 <__ctors_end>:
+  b4:	11 24       	eor	r1, r1
+  b6:	1f be       	out	0x3f, r1	; 63
+  b8:	cf ef       	ldi	r28, 0xFF	; 255
+  ba:	d8 e0       	ldi	r29, 0x08	; 8
+  bc:	de bf       	out	0x3e, r29	; 62
+  be:	cd bf       	out	0x3d, r28	; 61
+
+000000c0 <__do_clear_bss>:
+  c0:	21 e0       	ldi	r18, 0x01	; 1
+  c2:	a0 e0       	ldi	r26, 0x00	; 0
+  c4:	b1 e0       	ldi	r27, 0x01	; 1
+  c6:	01 c0       	rjmp	.+2      	; 0xca <.do_clear_bss_start>
+
+000000c8 <.do_clear_bss_loop>:
+  c8:	1d 92       	st	X+, r1
+
+000000ca <.do_clear_bss_start>:
+  ca:	a4 30       	cpi	r26, 0x04	; 4
+  cc:	b2 07       	cpc	r27, r18
+  ce:	e1 f7       	brne	.-8      	; 0xc8 <.do_clear_bss_loop>
+  d0:	0e 94 46 01 	call	0x28c	; 0x28c <main>
+  d4:	0c 94 5e 01 	jmp	0x2bc	; 0x2bc <_exit>
+
+000000d8 <__bad_interrupt>:
+  d8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000dc <setupModeIO>:
+ *  Author: Philipp Vidmar
+ */ 
+#include "pin-hal.h"
+
+void setupModeIO(uint8_t pin, uint8_t mode){
+	switch(mode) {
+  dc:	61 30       	cpi	r22, 0x01	; 1
+  de:	09 f0       	breq	.+2      	; 0xe2 <setupModeIO+0x6>
+  e0:	45 c0       	rjmp	.+138    	; 0x16c <setupModeIO+0x90>
+		case OUTPUT: 
+			/* DDRx always 8 bit means 0-7 -> (pin % 8) */
+			if (pin >= 0 && pin <= 7){ // DDRB 
+  e2:	88 30       	cpi	r24, 0x08	; 8
+  e4:	70 f4       	brcc	.+28     	; 0x102 <setupModeIO+0x26>
+				BIT_SET(DDRB, (pin % 8));	
+  e6:	44 b1       	in	r20, 0x04	; 4
+  e8:	87 70       	andi	r24, 0x07	; 7
+  ea:	21 e0       	ldi	r18, 0x01	; 1
+  ec:	30 e0       	ldi	r19, 0x00	; 0
+  ee:	b9 01       	movw	r22, r18
+  f0:	02 c0       	rjmp	.+4      	; 0xf6 <setupModeIO+0x1a>
+  f2:	66 0f       	add	r22, r22
+  f4:	77 1f       	adc	r23, r23
+  f6:	8a 95       	dec	r24
+  f8:	e2 f7       	brpl	.-8      	; 0xf2 <setupModeIO+0x16>
+  fa:	cb 01       	movw	r24, r22
+  fc:	84 2b       	or	r24, r20
+  fe:	84 b9       	out	0x04, r24	; 4
+ 100:	08 95       	ret
+			}else if (pin >= 8 && pin <= 15){ // DDRC 
+ 102:	98 ef       	ldi	r25, 0xF8	; 248
+ 104:	98 0f       	add	r25, r24
+ 106:	98 30       	cpi	r25, 0x08	; 8
+ 108:	70 f4       	brcc	.+28     	; 0x126 <setupModeIO+0x4a>
+				BIT_SET(DDRC, (pin % 8));
+ 10a:	47 b1       	in	r20, 0x07	; 7
+ 10c:	87 70       	andi	r24, 0x07	; 7
+ 10e:	21 e0       	ldi	r18, 0x01	; 1
+ 110:	30 e0       	ldi	r19, 0x00	; 0
+ 112:	b9 01       	movw	r22, r18
+ 114:	02 c0       	rjmp	.+4      	; 0x11a <setupModeIO+0x3e>
+ 116:	66 0f       	add	r22, r22
+ 118:	77 1f       	adc	r23, r23
+ 11a:	8a 95       	dec	r24
+ 11c:	e2 f7       	brpl	.-8      	; 0x116 <setupModeIO+0x3a>
+ 11e:	cb 01       	movw	r24, r22
+ 120:	84 2b       	or	r24, r20
+ 122:	87 b9       	out	0x07, r24	; 7
+ 124:	08 95       	ret
+			}else if (pin >= 16 && pin <= 23){ // DDRD
+ 126:	90 ef       	ldi	r25, 0xF0	; 240
+ 128:	98 0f       	add	r25, r24
+ 12a:	98 30       	cpi	r25, 0x08	; 8
+ 12c:	70 f4       	brcc	.+28     	; 0x14a <setupModeIO+0x6e>
+				BIT_SET(DDRD, (pin % 8));
+ 12e:	4a b1       	in	r20, 0x0a	; 10
+ 130:	87 70       	andi	r24, 0x07	; 7
+ 132:	21 e0       	ldi	r18, 0x01	; 1
+ 134:	30 e0       	ldi	r19, 0x00	; 0
+ 136:	b9 01       	movw	r22, r18
+ 138:	02 c0       	rjmp	.+4      	; 0x13e <setupModeIO+0x62>
+ 13a:	66 0f       	add	r22, r22
+ 13c:	77 1f       	adc	r23, r23
+ 13e:	8a 95       	dec	r24
+ 140:	e2 f7       	brpl	.-8      	; 0x13a <setupModeIO+0x5e>
+ 142:	cb 01       	movw	r24, r22
+ 144:	84 2b       	or	r24, r20
+ 146:	8a b9       	out	0x0a, r24	; 10
+ 148:	08 95       	ret
+			}else if (pin >= 24 && pin <= 27){ // DDRE
+ 14a:	98 ee       	ldi	r25, 0xE8	; 232
+ 14c:	98 0f       	add	r25, r24
+ 14e:	94 30       	cpi	r25, 0x04	; 4
+ 150:	68 f4       	brcc	.+26     	; 0x16c <setupModeIO+0x90>
+				BIT_SET(DDRE, (pin % 8));
+ 152:	4d b1       	in	r20, 0x0d	; 13
+ 154:	87 70       	andi	r24, 0x07	; 7
+ 156:	21 e0       	ldi	r18, 0x01	; 1
+ 158:	30 e0       	ldi	r19, 0x00	; 0
+ 15a:	b9 01       	movw	r22, r18
+ 15c:	02 c0       	rjmp	.+4      	; 0x162 <setupModeIO+0x86>
+ 15e:	66 0f       	add	r22, r22
+ 160:	77 1f       	adc	r23, r23
+ 162:	8a 95       	dec	r24
+ 164:	e2 f7       	brpl	.-8      	; 0x15e <setupModeIO+0x82>
+ 166:	cb 01       	movw	r24, r22
+ 168:	84 2b       	or	r24, r20
+ 16a:	8d b9       	out	0x0d, r24	; 13
+ 16c:	08 95       	ret
+
+0000016e <setupPWM>:
+#include "pwm-hal.h"
+
+void setupPWM(){
+	// Data Direction Register (DDR) bit corresponding to the OC0A pin must be set in order to enable the output driver
+	// PD6 = 22 (Timer/Counter0 Output Compare Match A Output) p.98
+	setupModeIO(22, OUTPUT); 
+ 16e:	61 e0       	ldi	r22, 0x01	; 1
+ 170:	86 e1       	ldi	r24, 0x16	; 22
+ 172:	0e 94 6e 00 	call	0xdc	; 0xdc <setupModeIO>
+
+	// Writing the TCCR0A.COM0x[1:0] bits to 0x2 will produce a non-inverted PWM;
+	BIT_SET(TCCR0A, 7); // COM0A1
+ 176:	84 b5       	in	r24, 0x24	; 36
+ 178:	80 68       	ori	r24, 0x80	; 128
+ 17a:	84 bd       	out	0x24, r24	; 36
+
+	// Fast PWM OCRA Update of OCR0x at BOTTOM p.
+	BIT_SET(TCCR0A, 0); // WGM00
+ 17c:	84 b5       	in	r24, 0x24	; 36
+ 17e:	81 60       	ori	r24, 0x01	; 1
+ 180:	84 bd       	out	0x24, r24	; 36
+	BIT_SET(TCCR0A, 1); // WGM01
+ 182:	84 b5       	in	r24, 0x24	; 36
+ 184:	82 60       	ori	r24, 0x02	; 2
+ 186:	84 bd       	out	0x24, r24	; 36
+
+	/* Compare match */
+	OCR0A = 128;
+ 188:	80 e8       	ldi	r24, 0x80	; 128
+ 18a:	87 bd       	out	0x27, r24	; 39
+	
+	/* Prescaler 1024 p.128 */
+	/* 16 000 000 HZ / 1204 = 15525 Hz	 */
+	/* 15525 Hz -> 6,4*10^-5 sek		 */
+	/* 6,4*10^-5 sek * 255 OCR = 0,01632 sek */
+	BIT_SET(TCCR0B, 0); // CS00
+ 18c:	85 b5       	in	r24, 0x25	; 37
+ 18e:	81 60       	ori	r24, 0x01	; 1
+ 190:	85 bd       	out	0x25, r24	; 37
+	BIT_SET(TCCR0B, 2); // CS02
+ 192:	85 b5       	in	r24, 0x25	; 37
+ 194:	84 60       	ori	r24, 0x04	; 4
+ 196:	85 bd       	out	0x25, r24	; 37
+ 198:	08 95       	ret
+
+0000019a <updatePWM>:
+}
+
+void updatePWM(uint8_t value){
+	OCR0A = value;
+ 19a:	87 bd       	out	0x27, r24	; 39
+ 19c:	08 95       	ret
+
+0000019e <setupTime>:
+ */
+
+#include "timer-hal.h"
+
+void setupTime(){
+	TIME_COUNTER = 0;
+ 19e:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 1a2:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 1a6:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 1aa:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+	BIT_SET(TCCR2A, 1); // p.197 WGM21 Set CTC-MODE
+ 1ae:	e0 eb       	ldi	r30, 0xB0	; 176
+ 1b0:	f0 e0       	ldi	r31, 0x00	; 0
+ 1b2:	80 81       	ld	r24, Z
+ 1b4:	82 60       	ori	r24, 0x02	; 2
+ 1b6:	80 83       	st	Z, r24
+	/* Calculation prescaler */
+	// 16 000 000 - 1/f=s -> 6.25 * 10^-8sek
+	// 2048us / 256 countersteps = 8 us
+	// 8us / 6,25*10^-8 sek = 128
+
+	BIT_SET(TCCR2B, 0); // p.197 CS20 Pres. to 128
+ 1b8:	e1 eb       	ldi	r30, 0xB1	; 177
+ 1ba:	f0 e0       	ldi	r31, 0x00	; 0
+ 1bc:	80 81       	ld	r24, Z
+ 1be:	81 60       	ori	r24, 0x01	; 1
+ 1c0:	80 83       	st	Z, r24
+	BIT_SET(TCCR2B, 2); // p.197 CA22
+ 1c2:	80 81       	ld	r24, Z
+ 1c4:	84 60       	ori	r24, 0x04	; 4
+ 1c6:	80 83       	st	Z, r24
+
+	// Compare Value = 2000us / 8 = 250 (We use 249, because 0 is also a value)
+	OCR2A = 249;
+ 1c8:	89 ef       	ldi	r24, 0xF9	; 249
+ 1ca:	80 93 b3 00 	sts	0x00B3, r24	; 0x8000b3 <__TEXT_REGION_LENGTH__+0x7f80b3>
+
+	/* enable Timer Interrupt */
+	BIT_SET(TIMSK2, 1); // p.200 OCIE2A
+ 1ce:	e0 e7       	ldi	r30, 0x70	; 112
+ 1d0:	f0 e0       	ldi	r31, 0x00	; 0
+ 1d2:	80 81       	ld	r24, Z
+ 1d4:	82 60       	ori	r24, 0x02	; 2
+ 1d6:	80 83       	st	Z, r24
+ 1d8:	08 95       	ret
+
+000001da <milliSeconds>:
+
+uint32_t milliSeconds(){
+	uint32_t currentTimerCounter = 0;
+	uint32_t currentTimerValue = 0;
+
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE){
+ 1da:	9f b7       	in	r25, 0x3f	; 63
+    return 1;
+}
+
+static __inline__ uint8_t __iCliRetVal(void)
+{
+    cli();
+ 1dc:	f8 94       	cli
+ 1de:	81 e0       	ldi	r24, 0x01	; 1
+	/* enable Timer Interrupt */
+	BIT_SET(TIMSK2, 1); // p.200 OCIE2A
+}
+
+uint32_t milliSeconds(){
+	uint32_t currentTimerCounter = 0;
+ 1e0:	40 e0       	ldi	r20, 0x00	; 0
+ 1e2:	50 e0       	ldi	r21, 0x00	; 0
+ 1e4:	ba 01       	movw	r22, r20
+	uint32_t currentTimerValue = 0;
+
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE){
+ 1e6:	0b c0       	rjmp	.+22     	; 0x1fe <milliSeconds+0x24>
+		currentTimerCounter = TIME_COUNTER;
+ 1e8:	40 91 00 01 	lds	r20, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 1ec:	50 91 01 01 	lds	r21, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 1f0:	60 91 02 01 	lds	r22, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 1f4:	70 91 03 01 	lds	r23, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+		currentTimerValue = TCNT2;
+ 1f8:	80 91 b2 00 	lds	r24, 0x00B2	; 0x8000b2 <__TEXT_REGION_LENGTH__+0x7f80b2>
+
+uint32_t milliSeconds(){
+	uint32_t currentTimerCounter = 0;
+	uint32_t currentTimerValue = 0;
+
+	ATOMIC_BLOCK(ATOMIC_RESTORESTATE){
+ 1fc:	80 e0       	ldi	r24, 0x00	; 0
+ 1fe:	81 11       	cpse	r24, r1
+ 200:	f3 cf       	rjmp	.-26     	; 0x1e8 <milliSeconds+0xe>
+    (void)__s;
+}
+
+static __inline__ void __iRestore(const  uint8_t *__s)
+{
+    SREG = *__s;
+ 202:	9f bf       	out	0x3f, r25	; 63
+		currentTimerCounter = TIME_COUNTER;
+		currentTimerValue = TCNT2;
+	}
+	/* timecounter 1 = 2 milliSekonds ------> (*2) */
+	currentTimerCounter = currentTimerCounter * 2; // mSekonds
+ 204:	cb 01       	movw	r24, r22
+ 206:	ba 01       	movw	r22, r20
+ 208:	66 0f       	add	r22, r22
+ 20a:	77 1f       	adc	r23, r23
+ 20c:	88 1f       	adc	r24, r24
+ 20e:	99 1f       	adc	r25, r25
+	/* When the timer is over half (*0.5) round up
+	if (currentTimerValue >= (*OCR2A) * 0.5){
+		return currentTimerCounter + 1;
+	}*/
+	return currentTimerCounter;
+}
+ 210:	08 95       	ret
+
+00000212 <delayMilliSeconds>:
+
+void delayMilliSeconds(uint32_t milliSekondsDelay){
+ 212:	cf 92       	push	r12
+ 214:	df 92       	push	r13
+ 216:	ef 92       	push	r14
+ 218:	ff 92       	push	r15
+ 21a:	6b 01       	movw	r12, r22
+ 21c:	7c 01       	movw	r14, r24
+	/* Create Timestamp */
+	uint32_t timeStamp = milliSeconds() + milliSekondsDelay;
+ 21e:	0e 94 ed 00 	call	0x1da	; 0x1da <milliSeconds>
+ 222:	c6 0e       	add	r12, r22
+ 224:	d7 1e       	adc	r13, r23
+ 226:	e8 1e       	adc	r14, r24
+ 228:	f9 1e       	adc	r15, r25
+	while (timeStamp > milliSeconds()){
+ 22a:	0e 94 ed 00 	call	0x1da	; 0x1da <milliSeconds>
+ 22e:	6c 15       	cp	r22, r12
+ 230:	7d 05       	cpc	r23, r13
+ 232:	8e 05       	cpc	r24, r14
+ 234:	9f 05       	cpc	r25, r15
+ 236:	c8 f3       	brcs	.-14     	; 0x22a <delayMilliSeconds+0x18>
+		// Wait till Timestamp is reached
+	}
+}
+ 238:	ff 90       	pop	r15
+ 23a:	ef 90       	pop	r14
+ 23c:	df 90       	pop	r13
+ 23e:	cf 90       	pop	r12
+ 240:	08 95       	ret
+
+00000242 <__vector_7>:
+
+ISR(TIMER2_COMPA_vect){
+ 242:	1f 92       	push	r1
+ 244:	0f 92       	push	r0
+ 246:	0f b6       	in	r0, 0x3f	; 63
+ 248:	0f 92       	push	r0
+ 24a:	11 24       	eor	r1, r1
+ 24c:	8f 93       	push	r24
+ 24e:	9f 93       	push	r25
+ 250:	af 93       	push	r26
+ 252:	bf 93       	push	r27
+	TIME_COUNTER++;
+ 254:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 258:	90 91 01 01 	lds	r25, 0x0101	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 25c:	a0 91 02 01 	lds	r26, 0x0102	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 260:	b0 91 03 01 	lds	r27, 0x0103	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 264:	01 96       	adiw	r24, 0x01	; 1
+ 266:	a1 1d       	adc	r26, r1
+ 268:	b1 1d       	adc	r27, r1
+ 26a:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 26e:	90 93 01 01 	sts	0x0101, r25	; 0x800101 <__DATA_REGION_ORIGIN__+0x1>
+ 272:	a0 93 02 01 	sts	0x0102, r26	; 0x800102 <__DATA_REGION_ORIGIN__+0x2>
+ 276:	b0 93 03 01 	sts	0x0103, r27	; 0x800103 <__DATA_REGION_ORIGIN__+0x3>
+ 27a:	bf 91       	pop	r27
+ 27c:	af 91       	pop	r26
+ 27e:	9f 91       	pop	r25
+ 280:	8f 91       	pop	r24
+ 282:	0f 90       	pop	r0
+ 284:	0f be       	out	0x3f, r0	; 63
+ 286:	0f 90       	pop	r0
+ 288:	1f 90       	pop	r1
+ 28a:	18 95       	reti
+
+0000028c <main>:
+
+#define  PIN 22
+
+int main(void){
+	/* Bootsection */
+	setupPWM();
+ 28c:	0e 94 b7 00 	call	0x16e	; 0x16e <setupPWM>
+	setupTime();
+ 290:	0e 94 cf 00 	call	0x19e	; 0x19e <setupTime>
+	sei();
+ 294:	78 94       	sei
+	
+	/* Programmsection */
+	while(1){
+	updatePWM(50);
+ 296:	82 e3       	ldi	r24, 0x32	; 50
+ 298:	0e 94 cd 00 	call	0x19a	; 0x19a <updatePWM>
+	delayMilliSeconds(1000);
+ 29c:	68 ee       	ldi	r22, 0xE8	; 232
+ 29e:	73 e0       	ldi	r23, 0x03	; 3
+ 2a0:	80 e0       	ldi	r24, 0x00	; 0
+ 2a2:	90 e0       	ldi	r25, 0x00	; 0
+ 2a4:	0e 94 09 01 	call	0x212	; 0x212 <delayMilliSeconds>
+	updatePWM(255);
+ 2a8:	8f ef       	ldi	r24, 0xFF	; 255
+ 2aa:	0e 94 cd 00 	call	0x19a	; 0x19a <updatePWM>
+	delayMilliSeconds(1000);
+ 2ae:	68 ee       	ldi	r22, 0xE8	; 232
+ 2b0:	73 e0       	ldi	r23, 0x03	; 3
+ 2b2:	80 e0       	ldi	r24, 0x00	; 0
+ 2b4:	90 e0       	ldi	r25, 0x00	; 0
+ 2b6:	0e 94 09 01 	call	0x212	; 0x212 <delayMilliSeconds>
+ 2ba:	ed cf       	rjmp	.-38     	; 0x296 <main+0xa>
+
+000002bc <_exit>:
+ 2bc:	f8 94       	cli
+
+000002be <__stop_program>:
+ 2be:	ff cf       	rjmp	.-2      	; 0x2be <__stop_program>

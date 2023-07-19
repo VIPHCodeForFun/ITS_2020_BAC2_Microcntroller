@@ -5,11 +5,11 @@
  *  Author: Philipp Vidmar
  */ 
 
-
 #ifndef PWM_HAL_H_
 #define PWM_HAL_H_
 
-#include "../define/pwm-define.h"
+#include <avr/io.h>
+
 #include "pin-hal.h"
 
 /**/
