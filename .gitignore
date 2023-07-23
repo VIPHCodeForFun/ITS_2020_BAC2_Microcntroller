@@ -6,3 +6,7 @@
 
 # Ignoriere ausführbare Dateien
 *.exe
+
+# Ignoriere formatierungs Token für git
+token
+

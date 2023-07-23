@@ -1,0 +1,11 @@
+
+
+new Token till Dez:  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
+
+token is no longer acruel
+Step 1:
+    git remote remove origin
+Step 2:
+git remote add origin https://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@github.com/VIPHCodeForFun/ITS_2020_BAC2_Microcntroller.git
+
+git remote add origin https://TOKEN@github.com/VIPHCodeForFun/ITS_2020_BAC2_Microcntroller.git
