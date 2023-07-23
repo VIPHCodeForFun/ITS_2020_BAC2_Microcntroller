@@ -3,13 +3,11 @@
  *
  * Created: 03.07.2023 15:27:13
  *  Author: Philipp Vidmar
- */ 
-
+ */
 
 #ifndef PWM_HAL_H_
 #define PWM_HAL_H_
 
-#include "../define/pwm-define.h"
 #include "pin-hal.h"
 
 /**/
