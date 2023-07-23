@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/led-with-for-delay/led-with-for-delay.c
+/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/led-with-for-delay.c
 stdio.h
 -
 pico/stdlib.h
-/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/led-with-for-delay/pico/stdlib.h
+/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/pico/stdlib.h
 hardware/gpio.h
-/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/led-with-for-delay/hardware/gpio.h
+/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/hardware/gpio.h
 pico/binary_info.h
-/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/led-with-for-delay/pico/binary_info.h
+/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/pico/binary_info.h
 
 /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio.h
 common/tusb_common.h

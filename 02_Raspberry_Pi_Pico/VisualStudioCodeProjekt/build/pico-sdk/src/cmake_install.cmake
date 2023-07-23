@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/led-with-for-delay/build/pico-sdk/src/common/cmake_install.cmake")
-  include("/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/led-with-for-delay/build/pico-sdk/src/rp2_common/cmake_install.cmake")
-  include("/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/led-with-for-delay/build/pico-sdk/src/rp2040/cmake_install.cmake")
+  include("/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/build/pico-sdk/src/common/cmake_install.cmake")
+  include("/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/build/pico-sdk/src/rp2_common/cmake_install.cmake")
+  include("/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/build/pico-sdk/src/rp2040/cmake_install.cmake")
 
 endif()
 

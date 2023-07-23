@@ -1,5 +1,5 @@
 
-/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/led-with-for-delay/build/led-with-for-delay.elf:     file format elf32-littlearm
+/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/build/led-with-for-delay.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -46,7 +46,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
  20 .debug_frame  00000028  00000000  00000000  0000a5b8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
-/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/led-with-for-delay/build/led-with-for-delay.elf:     file format elf32-littlearm
+/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/build/led-with-for-delay.elf:     file format elf32-littlearm
 
 
 Disassembly of section .boot2:
