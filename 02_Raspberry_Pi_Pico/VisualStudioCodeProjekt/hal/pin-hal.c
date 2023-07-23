@@ -8,7 +8,13 @@
 
 void setupModeIO(uint8_t pin, uint8_t mode)
 {
-	clearReset(IO_BANK0); // Disable reset status GPIO
+	// Clear Reset 
+	// RESETS_RESET io_rw_32  	p.177 
+	uint32_t *ptr = io_rw_32[5]; // 0x00000020 [5] : io_bank0 (1)
+	// RESETS_RESET_DONE	p.178
+	io_ro_32[5] // 0x00000020 [5] : io_bank0 (0)
+ 
+
 	switch (mode)
 	{
 	case OUTPUT:
