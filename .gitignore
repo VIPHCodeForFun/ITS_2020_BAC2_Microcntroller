@@ -8,5 +8,5 @@
 *.exe
 
 # Ignoriere formatierungs Token für git
-token.txt
+token
 
