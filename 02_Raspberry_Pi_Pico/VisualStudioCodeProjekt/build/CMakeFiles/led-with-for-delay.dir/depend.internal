@@ -189,6 +189,10 @@ CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntrol
  /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S
  generated/pico_base/pico/config_autogen.h
  generated/pico_base/pico/version.h
+CMakeFiles/led-with-for-delay.dir/hal/pin-hal.c.obj
+ /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/define/bit.h
+ /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/hal/pin-hal.c
+ /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/hal/pin-hal.h
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
  /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio.h
  /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
@@ -2222,46 +2226,8 @@ CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntrol
  generated/pico_base/pico/config_autogen.h
  generated/pico_base/pico/version.h
 CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj
+ /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/define/bit.h
+ /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/hal/pin-hal.h
  /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/led-with-for-delay.c
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/boards/include/boards/pico.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico/assert.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico/config.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico/error.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico/types.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_time/include/pico/time.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
- /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
- generated/pico_base/pico/config_autogen.h
- generated/pico_base/pico/version.h
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
  /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp

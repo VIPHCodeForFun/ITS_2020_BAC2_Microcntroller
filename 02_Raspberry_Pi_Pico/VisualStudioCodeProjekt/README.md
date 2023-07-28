@@ -15,6 +15,10 @@
         INDEX.HTM INFO_UF2.TXT
 ## Copy
     $ sudo cp PROJECTNAME.uf2 /mnt/pico
+        sudo cp  led-with-for-delay.uf2 /mnt/pico
     $ sudo sync
 ## Dismount
     $ sudo umount /mnt/pico
+
+    
+   

@@ -220,6 +220,33 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
+hal/pin-hal.obj: hal/pin-hal.c.obj
+
+.PHONY : hal/pin-hal.obj
+
+# target to build an object file
+hal/pin-hal.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/led-with-for-delay.dir/build.make CMakeFiles/led-with-for-delay.dir/hal/pin-hal.c.obj
+.PHONY : hal/pin-hal.c.obj
+
+hal/pin-hal.i: hal/pin-hal.c.i
+
+.PHONY : hal/pin-hal.i
+
+# target to preprocess a source file
+hal/pin-hal.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/led-with-for-delay.dir/build.make CMakeFiles/led-with-for-delay.dir/hal/pin-hal.c.i
+.PHONY : hal/pin-hal.c.i
+
+hal/pin-hal.s: hal/pin-hal.c.s
+
+.PHONY : hal/pin-hal.s
+
+# target to generate assembly for a file
+hal/pin-hal.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/led-with-for-delay.dir/build.make CMakeFiles/led-with-for-delay.dir/hal/pin-hal.c.s
+.PHONY : hal/pin-hal.c.s
+
 home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 
 .PHONY : home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
@@ -1927,6 +1954,9 @@ help:
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... bs2_default"
 	@echo "... led-with-for-delay"
+	@echo "... hal/pin-hal.obj"
+	@echo "... hal/pin-hal.i"
+	@echo "... hal/pin-hal.s"
 	@echo "... home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"

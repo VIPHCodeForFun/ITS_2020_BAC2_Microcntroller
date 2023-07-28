@@ -189,6 +189,10 @@ CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntrol
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: generated/pico_base/pico/config_autogen.h
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: generated/pico_base/pico/version.h
 
+CMakeFiles/led-with-for-delay.dir/hal/pin-hal.c.obj: ../define/bit.h
+CMakeFiles/led-with-for-delay.dir/hal/pin-hal.c.obj: ../hal/pin-hal.c
+CMakeFiles/led-with-for-delay.dir/hal/pin-hal.c.obj: ../hal/pin-hal.h
+
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio.h
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.h
@@ -2221,47 +2225,9 @@ CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntrol
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: generated/pico_base/pico/config_autogen.h
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: generated/pico_base/pico/version.h
 
+CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: ../define/bit.h
+CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: ../hal/pin-hal.h
 CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: ../led-with-for-delay.c
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/boards/include/boards/pico.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico/assert.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico/config.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico/error.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include/pico/types.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_time/include/pico/time.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: generated/pico_base/pico/config_autogen.h
-CMakeFiles/led-with-for-delay.dir/led-with-for-delay.c.obj: generated/pico_base/pico/version.h
 
 CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: /home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
 

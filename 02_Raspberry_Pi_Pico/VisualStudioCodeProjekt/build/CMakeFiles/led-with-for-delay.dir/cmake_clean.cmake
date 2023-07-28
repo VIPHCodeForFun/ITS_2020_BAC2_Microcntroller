@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/led-with-for-delay.dir/hal/pin-hal.c.obj"
   "CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
   "CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
   "CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"

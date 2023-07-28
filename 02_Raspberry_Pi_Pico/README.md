@@ -9,5 +9,3 @@ https://github.com/VIPHCodeForFun/ITS_2020_BAC2_Microcntroller/blob/main/02_Rasp
 ## For setting up a new project on the RPI due to instructions getting-started-with-pico.pdf Chapter 8 Follow.
 ## Compiling the project Chapter 3. blinking an LED in C
 
-git config --global user.name "VIPHCodeForFun"
-git config --global user.email "vidmar.philipp@gmail.com"

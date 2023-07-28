@@ -1,18 +1,35 @@
+# Set cmake_minimum_required Version
 cmake_minimum_required(VERSION 3.13)
 
+# include Buildfunctions from Pico SDK
 include(pico_sdk_import.cmake)
 
+# Set Project name (as Project_Name) and C/C++ Stamdarts
 project(test_project C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
+
+# Create a pico-sdk subdirectory in the project for the libaries
 pico_sdk_init()
 
+# Add the directory where your files are located
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(hal)
+include_directories(define)
+
+# Tell CMake where to find the executable source file
 add_executable(led-with-for-delay
-led-with-for-delay.c
-)
+led-with-for-delay.c hal/pin-hal.c
+)   
+
+# Vreate map/bin/hex/uf2 files
+pico_add_extra_outputs(led-with-for-delay)
+
+# link to pico_stdlib
+target_link_libraries(led-with-for-delay pico_stdlib)
 
 pico_enable_stdio_usb(led-with-for-delay 1)
-pico_enable_stdio_uart(led-with-for-delay 1)
+# pico_enable_stdio_uart(led-with-for-delay 1)
 
-pico_add_extra_outputs(led-with-for-delay)
-target_link_libraries(led-with-for-delay pico_stdlib)
+
+

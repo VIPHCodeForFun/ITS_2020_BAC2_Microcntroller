@@ -9,10 +9,6 @@
 /**--- Atomic Register Access p.18 ------------------------------
  * Each peripheral register block is allocated 4kB of address space, with registers accessed using one of 4 methods,
  * selected by address decode.
- * • Addr + 0x0000 : normal read write access
- * • Addr + 0x1000 : atomic XOR on write
- * • Addr + 0x2000 : atomic bitmask set on write
- * • Addr + 0x3000 : atomic bitmask clear on write
  */
 #define NORMAL 0x00000000       // normal read write access
 #define ATOMIC_XOR 0x00001000   // atomic XOR on write

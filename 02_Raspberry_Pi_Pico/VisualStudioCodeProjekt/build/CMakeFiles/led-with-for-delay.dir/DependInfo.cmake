@@ -69,6 +69,9 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "../"
+  "../hal"
+  "../define"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include"
@@ -117,6 +120,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
   )
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/hal/pin-hal.c" "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/build/CMakeFiles/led-with-for-delay.dir/hal/pin-hal.c.obj"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c" "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/build/CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c" "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/build/CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c" "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/VisualStudioCodeProjekt/build/CMakeFiles/led-with-for-delay.dir/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
@@ -227,6 +231,9 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../"
+  "../hal"
+  "../define"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include"
@@ -328,6 +335,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../"
+  "../hal"
+  "../define"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/philipp/Desktop/ITS_2020_BAC2_Microcntroller/02_Raspberry_Pi_Pico/pico-sdk/src/common/pico_base/include"
