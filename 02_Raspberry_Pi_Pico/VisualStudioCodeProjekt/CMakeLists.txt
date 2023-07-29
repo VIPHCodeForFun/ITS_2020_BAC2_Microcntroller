@@ -19,7 +19,8 @@ include_directories(define)
 
 # Tell CMake where to find the executable source file
 add_executable(led-with-for-delay
-led-with-for-delay.c hal/pin-hal.c
+    led-with-for-delay.c 
+    hal/pin-hal.c
 )   
 
 # Vreate map/bin/hex/uf2 files
