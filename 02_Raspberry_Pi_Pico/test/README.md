@@ -1,4 +1,13 @@
-#LED Blink
+# Test der Toolchain
+Beispiel test_pico.c 
+    aus "Getting started with Raspberry Pi Pico" Chapter 8. Creating your own Project
+--> OK
+
+Beispiel test.c (LED Blink)
+--> OK
+
+
+# LED Blink
 
 #RP2040 Datasheet p.20 List of Registers
 

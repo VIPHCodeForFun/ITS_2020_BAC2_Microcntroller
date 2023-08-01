@@ -55,12 +55,14 @@
  * Reset is done ATOMIC !
  * Register: RESET, ATOMIC_CLEAR and RESET_DONE
  */
-void clearReset(uint8_t functionSelect){
+void clearReset(uint8_t functionSelect)
+{
     *RESET_ATOMIC_CLEAR = (uint32_t)(1 << functionSelect);
-    while (BIT_IS_SET(RESET_DONE, functionSelect)){ /*
-     Reset done. If a bit is set then a reset done signal has been returned by the peripheral.
-     This indicates that the peripheral’s registers are ready to be accessed.
-      */
+    while (BIT_IS_SET(RESET_DONE, functionSelect))
+    { /*
+Reset done. If a bit is set then a reset done signal has been returned by the peripheral.
+This indicates that the peripheral’s registers are ready to be accessed.
+*/
     }
 }
 

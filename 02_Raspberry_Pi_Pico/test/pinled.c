@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "hal/pin-hal.h"
+#include "pinhal.h"
 
 #define PIN 0
 
@@ -8,6 +8,7 @@ int main(void)
 {
   /* Bootsection */
   setupModeIO(PIN, OUTPUT);
+
   // Setup for delay
   uint32_t tick = 0;
   uint32_t ticks = 1000000;
@@ -20,7 +21,7 @@ int main(void)
     {
       // Wait
     }
-    clearPin(PIN);
+    // clearPin(PIN);
     for (tick = 0; tick < ticks; tick++)
     {
       // Wait
