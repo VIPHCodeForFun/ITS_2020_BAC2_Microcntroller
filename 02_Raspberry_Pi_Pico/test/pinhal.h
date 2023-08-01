@@ -1,20 +1,12 @@
-/*
- * ioHAL.h
- *
- * Created: 11.07.2023 16:21:37
- *  Author: Philipp Vidmar
+#ifndef PICOHAL_H
+#define PICOHAL_H
+/**
+ * RP2040 C bare metal
+ * by Philipp Vidmar
  */
-
-#ifndef IOHAL_H_
-#define IOHAL_H_
-
-#include <stdint.h>
+#include <stdint.h> // For uintXX_t types
 
 #include "pinbit.h"
-
-#define OUTPUT (uint8_t)1
-
-#define IO_BANK0 5
 
 /**--- Atomic Register Access p.18 ------------------------------
  * Each peripheral register block is allocated 4kB of address space, with registers accessed using one of 4 methods,
@@ -27,55 +19,48 @@
 
 #define RESETS_BASE 0x4000c000                                     // Table p.178
 #define RESET (volatile uint32_t *)(RESETS_BASE + 0x00000000)      // Reset control.
+#define WDSEL (volatile uint32_t *)(RESETS_BASE + 0x00000004)      // Watchdog select.
 #define RESET_DONE (volatile uint32_t *)(RESETS_BASE + 0x00000008) // Reset done.
+// ATOMIC ACCSESS
+#define RESET_ATOMIC_CLEAR (volatile uint32_t *)(RESET + ATOMIC_CLEAR)
 
-#define BANK_IO_BASE 0x40014000                                       // Table p.243
-#define GPIO0_STATUS (volatile uint32_t *)(BANK_IO_BASE + 0x00000000) // 0x000 	GPIO0_STATUS 	GPIO status
-#define GPIO0_CTRL (volatile uint32_t *)(BANK_IO_BASE + 0x00000004)   // 0x004 	GPIO0_CTRL 		GPIO control including function select and overrides.
-// GPIO1_STATUS...
-// GPIO1_CTRL...
-// ...
+// RESET Bits
+#define IO_BANK0 5
 
-#define SIO_BASE 0xd0000000                                       // Table p.42
+/**--- SINGLE CYCLE IO (SIO) p.27 ------------------------------
+ */
+#define SIO_BASE 0xd0000000 // Table p.42
+// 0x000 	CPUID 			Processor core identifier
+// 0x004 	GPIO_IN 	    Input value for GPIO pins
+// 0x008 	GPIO_HI_IN 		Input value for QSPI pins
 #define GPIO_OUT (volatile uint32_t *)(SIO_BASE + 0x00000010)     // 0x010 	GPIO_OUT 		GPIO output value
 #define GPIO_OUT_SET (volatile uint32_t *)(SIO_BASE + 0x00000014) // 0x014 	GPIO_OUT_SET    GPIO output value set
 #define GPIO_OUT_CLR (volatile uint32_t *)(SIO_BASE + 0x00000018) // 0x018 	GPIO_OUT_CLR    GPIO output value clear
+// 0x01c 	GPIO_OUT_XOR    GPIO output value XOR
+#define GPIO_OE (volatile uint32_t *)(SIO_BASE + 0x00000020)     // 0x020 	GPIO_OE GPIO 	output enable
+#define GPIO_OE_SET (volatile uint32_t *)(SIO_BASE + 0x00000024) // 0x024 	GPIO_OE_SET     GPIO output enable set
+#define GPIO_OE_CLR (volatile uint32_t *)(SIO_BASE + 0x00000028) // 0x028 	GPIO_OE_CLR     GPIO output enable clear
 
-#define GPIO_OE (volatile uint32_t *)(SIO_BASE + 0x00000020) // 0x020 	GPIO_OE GPIO 	output enable
+#define BANK_IO 0x40014000                                       // Table p.243
+#define GPIO0_STATUS (volatile uint32_t *)(BANK_IO + 0x00000000) // 0x000 	GPIO0_STATUS 	GPIO status
+#define GPIO0_CTRL (volatile uint32_t *)(BANK_IO + 0x00000004)   // 0x004 	GPIO0_CTRL 		GPIO control including function select and overrides.
+//... USW
 
-#define RESET_ATOMIC_CLEAR (volatile uint32_t *)(RESET + ATOMIC_CLEAR)
+/** p.247-------*/
 
-void setupModeIO(uint8_t pin, uint8_t mode)
+#define GPIO_FUNC_SIO (uint32_t)5
+
+#define GPIO_FUNC_NULL 0x0000001f // ->0001 1111
+
+/* PINS */
+#define PIN0 0
+
+void clearReset(uint8_t functionSelect)
 {
-    *RESET_ATOMIC_CLEAR = (uint32_t)(1 << IO_BANK0);
-    while (BIT_IS_SET(*RESET_DONE, IO_BANK0))
-    { /*
-        Reset done. If a bit is set then a reset done signal has been returned by the peripheral.
-        This indicates that the peripheral’s registers are ready to be accessed.
-     */
+    *RESET_ATOMIC_CLEAR = (uint32_t)(1 << functionSelect);
+    while (BIT_IS_SET_PTR(RESET_DONE, functionSelect))
+    {
     }
-
-    // Just works for PIN0 !
-    pin = 0;
-
-    UINT32_T_CLR(GPIO0_CTRL, 0x0000001f);  // Clear reset value null
-    UINT32_T_SET(GPIO0_CTRL, (uint32_t)5); // Function select p.247
-
-    BIT_SET(*GPIO_OE, pin); // Output enable registers 1 for drive high/low based on GPIO_OUT
-
-    return;
 }
 
-void setPin(uint8_t pin)
-{
-    BIT_SET(*GPIO_OUT_SET, pin); // Perform an atomic bit-set on GPIO_OUT p.47
-    return;
-}
-
-void clearPin(uint8_t pin)
-{
-    BIT_SET(*GPIO_OUT_CLR, pin); // Perform an atomic bit-clear on GPIO_OUT p.47
-    return;
-}
-
-#endif /* IOHAL_H_ */
+#endif // PICOHAL_H

@@ -9,13 +9,22 @@
 #ifndef BIT_H_
 #define BIT_H_
 
+/* OLD!
+#define BIT_SET(address, bit) (*(address) |= (1 << (bit)))
+#define BIT_CLR(address, bit) (*(address) &= ~(1 << (bit)))
+#define BIT_IS_SET(address, bit) (!!(*(address)) & (1 << bit))
+
+#define UINT32_T_SET(address, uint32_t) (*(address) |= uint32_t)
+#define UINT32_T_CLR(address, uint32_t) (*(address) &= ~uint32_t)
+*/
+/* NEW! */
 #define BIT_SET(byte, bit) (byte |= (1 << (bit)))
 #define BIT_CLR(byte, bit) (byte &= ~(1 << (bit)))
 #define BIT_IS_SET(byte, bit) (!!((byte) & (1 << bit)))
 
-#define BIT_SET_ADDRESS(address, bit) (*(address) |= (1 << (bit)))
-#define BIT_CLR_ADDRESS(address, bit) (*(address) &= ~(1 << (bit)))
-#define BIT_IS_SET_ADDRESS(address, bit) (!!(*(address)) & (1 << bit))
+#define BIT_SET_PTR(address, bit) (*(address) |= (1 << (bit)))
+#define BIT_CLR_PTR(address, bit) (*(address) &= ~(1 << (bit)))
+#define BIT_IS_SET_PTR(address, bit) (!!(*(address)) & (1 << bit))
 
 #define UINT32_T_SET(address, uint32_t) (*(address) |= uint32_t)
 #define UINT32_T_CLR(address, uint32_t) (*(address) &= ~uint32_t)

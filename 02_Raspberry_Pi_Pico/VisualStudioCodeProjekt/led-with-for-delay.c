@@ -9,8 +9,8 @@ int main(void)
   /* Bootsection */
   setupModeIO(PIN, OUTPUT);
   // Setup for delay
-  uint32_t tick = 0;
-  uint32_t ticks = 1000000;
+  volatile uint32_t tick = 0;
+  volatile uint32_t ticks = 12500000;
 
   /* Programmsection */
   while (1)

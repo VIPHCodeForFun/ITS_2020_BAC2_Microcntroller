@@ -10,7 +10,7 @@
 
 #include <stdint.h>
 
-#include "define/bit.h"
+#include "../define/bit.h"
 
 #define OUTPUT (uint8_t)1
 
