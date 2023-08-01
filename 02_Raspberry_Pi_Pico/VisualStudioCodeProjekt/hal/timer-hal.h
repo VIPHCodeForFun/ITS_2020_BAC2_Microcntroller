@@ -11,13 +11,13 @@
 #include <stdint.h> // uintx_t
 
 #include "../define/bit.h"
+#include "../define/reset.h"
+#include "../define/timer-define.h"
 
-/**/
-volatile uint32_t TIME_COUNTER;
 /**/
 void setupTime();
 /**/
-uint32_t milliSeconds();
+uint64_t milliSeconds();
 /**/
 void delayMilliSeconds(uint32_t milliSekondsDelay);
 

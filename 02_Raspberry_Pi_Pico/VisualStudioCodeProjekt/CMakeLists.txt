@@ -17,6 +17,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(hal)
 include_directories(define)
 
+#### led-with-for-delay ####
 # Tell CMake where to find the executable source file
 add_executable(led-with-for-delay
     led-with-for-delay.c 
@@ -30,6 +31,24 @@ pico_add_extra_outputs(led-with-for-delay)
 target_link_libraries(led-with-for-delay pico_stdlib)
 
 pico_enable_stdio_usb(led-with-for-delay 1)
+# pico_enable_stdio_uart(led-with-for-delay 1)
+
+
+#### led-with-timer-delay ####
+# Tell CMake where to find the executable source file
+add_executable(led-with-timer-delay
+led-with-timer-delay.c 
+    hal/pin-hal.c
+    hal/timer-hal.c
+)   
+
+# Vreate map/bin/hex/uf2 files
+pico_add_extra_outputs(led-with-timer-delay)
+
+# link to pico_stdlib
+target_link_libraries(led-with-timer-delay pico_stdlib)
+
+pico_enable_stdio_usb(led-with-timer-delay 1)
 # pico_enable_stdio_uart(led-with-for-delay 1)
 
 

@@ -5,8 +5,8 @@
  *  Author: Philipp Vidmar
  */
 
-#include "hal/timer-hal.h"
 #include "pin-hal.h"
+#include "hal/timer-hal.h"
 
 #define PIN 0
 
