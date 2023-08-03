@@ -28,16 +28,7 @@ void setupModeIO(uint8_t pin, uint8_t mode)
 		UINT32_T_CLR(GPIO0_CTRL, 0x0000001f);  // Clear reset value null
 		UINT32_T_SET(GPIO0_CTRL, (uint32_t)5); // Function select p.247
 		BIT_SET_PTR(GPIO_OE, pin);			   // Output enable registers 1 for drive high/low based on GPIO_OUT
-		/*
-		BIT_CLR(*GPIO0_CTRL, 0);
-		BIT_CLR(*GPIO0_CTRL, 1);
-		BIT_CLR(*GPIO0_CTRL, 2);
-		BIT_CLR(*GPIO0_CTRL, 3);
-		BIT_CLR(*GPIO0_CTRL, 4);
-		// Set Function Select GPIO_FUNC_SIO -> Functionselect = 5 -> 0101 	p.237
-		BIT_SET(*GPIO0_CTRL, 0);
-		BIT_SET(*GPIO0_CTRL, 2);
-		*/
+
 		break;
 	// case IMPUT:
 	default:
