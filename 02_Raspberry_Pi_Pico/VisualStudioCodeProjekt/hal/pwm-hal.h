@@ -8,11 +8,16 @@
 #ifndef PWM_HAL_H_
 #define PWM_HAL_H_
 
+#include <stdint.h>
+
+#include "../define/bit.h"
+#include "../define/reset.h"
+
 #include "pin-hal.h"
 
 /**/
 void setupPWM();
 /**/
-void updatePWM(uint8_t value);
+void updatePWM(uint16_t value);
 
 #endif /* PWM-HAL_H_ */

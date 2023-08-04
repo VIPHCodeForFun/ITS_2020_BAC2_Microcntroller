@@ -17,9 +17,9 @@ int main(void)
 	/* Programmsection */
 	while (1)
 	{
-		updatePWM(50);
+		updatePWM(32767); // 50 %
 		delayMilliSeconds(1000);
-		updatePWM(255);
+		updatePWM(65535); // 100 %
 		delayMilliSeconds(1000);
 	}
 }

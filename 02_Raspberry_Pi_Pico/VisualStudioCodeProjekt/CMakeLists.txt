@@ -27,11 +27,12 @@ add_executable(led-with-for-delay
 # Vreate map/bin/hex/uf2 files
 pico_add_extra_outputs(led-with-for-delay)
 
-# link to pico_stdlib
+# Link to pico_stdlib
 target_link_libraries(led-with-for-delay pico_stdlib)
 
+# Serial interface 1 = ON, 0 = OFF
 pico_enable_stdio_usb(led-with-for-delay 1)
-# pico_enable_stdio_uart(led-with-for-delay 1)
+pico_enable_stdio_uart(led-with-for-delay 0)
 
 
 #### led-with-timer-delay ####
@@ -45,11 +46,32 @@ led-with-timer-delay.c
 # Vreate map/bin/hex/uf2 files
 pico_add_extra_outputs(led-with-timer-delay)
 
-# link to pico_stdlib
+# Link to pico_stdlib
 target_link_libraries(led-with-timer-delay pico_stdlib)
 
+# Serial interface 1 = ON, 0 = OFF
 pico_enable_stdio_usb(led-with-timer-delay 1)
-# pico_enable_stdio_uart(led-with-for-delay 1)
+pico_enable_stdio_uart(led-with-for-delay 0)
+
+
+#### led-blink-with-pwm ####
+# Tell CMake where to find the executable source file
+add_executable(led-blink-with-pwm
+    led-blink-with-pwm.c 
+    hal/pin-hal.c
+    hal/timer-hal.c
+    hal/pwm-hal.c
+)   
+
+# Vreate map/bin/hex/uf2 files
+pico_add_extra_outputs(led-blink-with-pwm)
+
+# Link to pico_stdlib
+target_link_libraries(led-blink-with-pwm pico_stdlib)
+
+# Serial interface 1 = ON, 0 = OFF
+pico_enable_stdio_usb(led-blink-with-pwm 1)
+pico_enable_stdio_uart(led-with-for-delay 0)
 
 
 

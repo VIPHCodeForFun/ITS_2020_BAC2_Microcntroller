@@ -21,18 +21,25 @@
 
 void setupPWM()
 {
+    /* Clear IO Reset */
+    setupModeIO(0, 0);
+
     /* Clear Reset look pin-hal.c */
     BIT_SET_PTR((RESET + ATOMIC_CLEAR), PWM);
     while (BIT_IS_SET_PTR(RESET_DONE, PWM))
     {
     }
-    /* Function Select GPIO PWM0 A mode */
+    /* Function Select GPIO PIN0 PWM0 A mode */
     UINT32_T_CLR(GPIO0_CTRL, 0x0000001f);  // Clear reset value null
     UINT32_T_SET(GPIO0_CTRL, (uint32_t)4); // Function select p.247
 
-    /* Counter compare 0xffff = 65535 */
-    *CH0_CC = 0x7FFF; // 32767 = 50%
+    /* Counter compare 0xffff = 65535 CHAN A[15:0] B[31:16] */
+    *CH0_CC = 0x00007FFF; // 32767 = 50%
 
+    /* set FRAC to 1*/
+    UINT32_T_SET(CH0_DIV, 0x00000001);
+
+    // CH0_TOP resetvalue = 0xffff
     BIT_IS_SET_PTR(CH0_CSR, 0); // Enable the PWM channel.
 }
 
