@@ -41,21 +41,37 @@ https://github.com/HelTecAutomation/Heltec_ESP32
 
 # VSCode with Espressif IDF Extention for ESP32 development 
 
-https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md
-
 https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/
 
+https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md
 
-## ESP-IDF directory (IDF_PARTH)
+ESP-IDF directory (IDF_PARTH)
+	C:\Users\User\esp\esp-idf
+ESP-IDF directory
+	C:\Users\User\.espressif
 
-C:\Users\User\esp\esp-idf
+## First Steps Guide
+https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/basic_use.md
 
-## ESP-IDF directory
-C:\Users\User\.espressif
+1) Create BLINK Example Projekt
+2) edit code
+	// #define BLINK_GPIO CONFIG_BLINK_GPIO
+	#define BLINK_GPIO 23
+
+	// vTaskDelay(CONFIG_BLINK_PERIOD / portTICK_PERIOD_MS);
+	 for (int i = 0; i < 10000000; i++) { }
+	
+   ESP-IDF: Build your project
+   ESP-IDF: Flash (UART) your project
+	note: 	CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
+		used COM10
+
+## Test
+OK
 
 ## ESP-IDF Comands Strg+Shift+P
 
-1	ESP-IDF: Show Examples Projects
+1	ESP-IDF: Show Examples Projects	
 2	ESP-IDF: SDK Configuration editor
 3	ESP-IDF: Build your project
 4	ESP-IDF: Size analysis of the binaries
@@ -65,9 +81,8 @@ C:\Users\User\.espressif
 		ESP-IDF: Flash (with JTag)
 	ESP-IDF: Monitor your device
 
-## sdkconfig
-CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
-used COM10
+
+
 
 
 
