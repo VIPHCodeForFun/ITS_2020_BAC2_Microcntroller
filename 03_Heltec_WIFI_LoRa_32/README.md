@@ -2,8 +2,8 @@
 
 # Get Driver for UART to USB for Win
 
-check device manager
-->CP2102 USB to UART Bridge Controller
+-> Check device manager
+	= CP2102 USB to UART Bridge Controller
 
 https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
 -> CP210x Universal Windows Driver
@@ -12,24 +12,24 @@ https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
 # Arduino
 https://www.youtube.com/watch?v=dk-01OpKYuQ
 
-file
-->preferences->
+├── file
+│ 	└── preferences
 https://docs.heltec.org/en/node/esp32/quick_start.html#via-arduino-board-manager
 
 ## Boardmanager
-Tools
--> Board 
-->-> Boardmanager
-->->-> heltec esp32 Series Dev-boards (for the WiFi LoRa 32 use V0.0.1!)
-
+├── Tools                   
+│   └── Board 
+│   	└── Boardmanager
+│			└── heltec esp32 Series Dev-boards (for the WiFi LoRa 32 use V0.0.1!)
+          
 ## Lib
-Lib Manager
--> Heltec ESP32 Dev-Boards
+├── Lib Manager                   
+│   └── Heltec ESP32 Dev-Boards 
 
 ## Examples
-File
--> Examples
-->-> Heltec ESP32 Boards...
+├── File                   
+│   └── Examples 
+│   	└── Heltec ESP32 Boards...
 
 ## Test
 OK
@@ -40,6 +40,8 @@ https://github.com/HelTecAutomation/Heltec_ESP32
 
 
 # VSCode with Espressif IDF Extention for ESP32 development 
+Video:
+	https://www.youtube.com/watch?v=XDDcS7HQNlI
 
 https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/
 
@@ -80,6 +82,10 @@ OK
 		ESP-IDF: Flash (UART) your project
 		ESP-IDF: Flash (with JTag)
 	ESP-IDF: Monitor your device
+	
+# Create a new Project
+> https://www.youtube.com/watch?v=oHHOCdmLiII
+
 
 
 
