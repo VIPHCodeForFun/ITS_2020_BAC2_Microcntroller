@@ -5,17 +5,19 @@
  *  Author: Philipp Vidmar
  */
 
-#include "hal/pwm-hal.h"
-#include "hal/timer-hal.h"
+#include "../hal/timer-hal.h"
+#include "../hal/pwm-hal.h"
 
-int main(void) {
+int main(void)
+{
   /* Bootsection */
   setupPWM();
   setupTime();
   sei();
 
   /* Programmsection */
-  while (1) {
+  while (1)
+  {
     updatePWM(50);
     delayMilliSeconds(1000);
     updatePWM(255);

@@ -13,6 +13,7 @@
 
 #include "../define/bit.h"
 #include "../define/pin-define.h"
+#include "../define/timer-define.h"
 
 #define OUTPUT (uint8_t)1
 

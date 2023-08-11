@@ -11,9 +11,8 @@
 #include <stdint.h> // uintx_t
 
 #include "../define/bit.h"
+#include "../define/timer-define.h"
 
-/**/
-volatile uint32_t TIME_COUNTER;
 /**/
 void setupTime();
 /**/
