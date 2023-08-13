@@ -6,13 +6,13 @@
 
 int main(void)
 {
-  /* Bootsection */
+  /* Boot section */
   setupModeIO(PIN, OUTPUT);
   // Setup for delay
   volatile uint32_t tick = 0;
   volatile uint32_t ticks = 12500000;
 
-  /* Programmsection */
+  /* Program section */
   while (1)
   {
     setPin(PIN);

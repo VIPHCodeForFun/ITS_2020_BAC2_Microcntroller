@@ -10,11 +10,11 @@
 
 int main(void)
 {
-	/* Bootsection */
+	/* Boot section */
 	setupPWM();
 	setupTime();
 
-	/* Programmsection */
+	/* Program section */
 	while (1)
 	{
 		updatePWM(32767); // 50 %

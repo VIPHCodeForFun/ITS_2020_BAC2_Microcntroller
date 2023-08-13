@@ -10,14 +10,15 @@
 
 #define PIN 0
 
-int main(void) {
-  /* Bootsection */
+int main(void)
+{
+  /* Boot section */
   setupModeIO(PIN, OUTPUT);
   setupTime();
-  sei();
 
-  /* Programmsection */
-  while (1) {
+  /* Program section */
+  while (1)
+  {
     setPin(PIN);
     delayMilliSeconds(1000);
     clearPin(PIN);

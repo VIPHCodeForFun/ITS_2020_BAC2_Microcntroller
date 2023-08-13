@@ -12,11 +12,11 @@
 
 int app_main(void)
 {
-  /* Bootsection */
+  /* Boot section */
   setupModeIO(PIN, OUTPUT);
   setupTime();
 
-  /* Programmsection */
+  /* Program section */
   while (1)
   {
     setPin(PIN);

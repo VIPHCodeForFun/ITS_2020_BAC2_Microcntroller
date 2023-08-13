@@ -11,13 +11,13 @@
 
 int app_main(void)
 {
-  /* Bootsection */
+  /* Boot section */
   setupModeIO(PIN, OUTPUT);
   // Setup for delay
   uint32_t tick = 0;
   uint32_t ticks = 8000000;
 
-  /* Programmsection */
+  /* Program section */
   while (1)
   {
     setPin(PIN);
