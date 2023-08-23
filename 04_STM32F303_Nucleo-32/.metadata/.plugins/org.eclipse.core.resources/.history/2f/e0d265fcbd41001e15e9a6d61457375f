@@ -1,0 +1,43 @@
+/*
+ * timer_hal.c
+ *
+ * Created: 01.07.2023 17:43:40
+ *  Author: Philipp Vidmar
+ */
+
+#include "hal/timer-hal.h"
+
+void setupTime() {
+	BIT_SET_PTR(RCC_APB1ENR, 4); // TIM6EN: TIM6 timer clock enable p.154
+
+	BIT_SET_PTR(TIM6_DIER, 0); // 1: Update interrupt enabled.
+	BIT_SET_PTR(TIM6_DIER, 8); // 1: Update DMA request enabled.
+
+	uint32_t ticks = 1000;
+	/* SETUP END */
+
+}
+
+uint32_t milliSeconds() {
+	BIT_CLR_PTR(TIM6_SR, 0);  // Disable eventflag
+	*TIM6_ARR = ticks;	// delay in ms
+	// TIMER 6 on APB1 BUS p.53
+	// APB1 on 8Mhz p.125
+	// Prescaler = (8,000,000 * 0.001) - 1 = 799
+	*TIM6_PSC = 7999;
+	BIT_SET_PTR(TIM6_CR1, 0); // Enable TIMER
+	while (!(BIT_IS_SET_PTR(TIM6_SR, 0))) {
+		// Wait till event
+
+	}
+	BIT_CLR_PTR(TIM6_CR1, 0); // Disable timer
+	BIT_CLR_PTR(TIM6_SR, 0);  // Disable eventflag
+}
+
+void delayMilliSeconds(uint32_t milliSekondsDelay) {
+	/* Create Timestamp */
+	uint32_t timeStamp = milliSeconds() + milliSekondsDelay;
+	while (timeStamp > milliSeconds()) {
+		// Wait till Timestamp is reached
+	}
+}

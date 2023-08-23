@@ -1,0 +1,18 @@
+
+.settings
+
+Debug/
+
+Drivers/
+
+.cproject
+
+.mxproject
+
+.project
+
+Cube-led-with-timer-delay Debug.launch
+
+Cube-led-with-timer-delay.ioc
+
+STM32F303K8TX_FLASH.ld

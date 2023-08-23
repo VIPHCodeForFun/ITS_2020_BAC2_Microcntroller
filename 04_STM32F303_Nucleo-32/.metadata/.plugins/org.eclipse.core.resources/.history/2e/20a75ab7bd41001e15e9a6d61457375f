@@ -1,0 +1,77 @@
+#include "main.h"
+#include "hal/pin-hal.h"
+#include "hal/timer-hal.h"
+
+#define PIN 1
+
+int main(void) {
+
+	setupModeIO(PIN, OUTPUT);
+	setupTime();
+
+	/* SETUP */
+	// BIT_SET_PTR(RCC_APB1RSTR,4); // TIM6RST: TIM6 timer reset Set and cleared by software.
+	BIT_SET_PTR(RCC_APB1ENR,4); // TIM6EN: TIM6 timer clock enable p.154
+
+	BIT_SET_PTR(TIM6_DIER,0); // 1: Update interrupt enabled.
+	BIT_SET_PTR(TIM6_DIER,8); // 1: Update DMA request enabled.
+
+	uint32_t ticks = 1000;
+	/* SETUP END */
+
+	clearPin(PIN);
+
+	while (1) {
+
+		// TIMER 6 on APB1 BUS p.53
+		// APB1 on 8Mhz p.125
+		/* TIMER */
+		BIT_CLR_PTR(TIM6_SR, 0);  // Disable eventflag
+		*TIM6_ARR = ticks;		   // delay in ms
+		*TIM6_PSC = 7999;
+		BIT_SET_PTR(TIM6_CR1, 0); // Enable TIMER
+		while (!(BIT_IS_SET_PTR(TIM6_SR, 0))) {
+			// Wait till event
+
+		}
+
+		BIT_CLR_PTR(TIM6_CR1, 0); // Disable timer
+		BIT_CLR_PTR(TIM6_SR, 0);  // Disable eventflag
+		/* TIMER END */
+
+		setPin(PIN);
+
+		/* TIMER */
+		BIT_CLR_PTR(TIM6_SR, 0);  // Disable eventflag
+		*TIM6_ARR = ticks;		   // delay in ms
+		BIT_SET_PTR(TIM6_CR1, 0); // Enable TIMER
+
+		while (!(BIT_IS_SET_PTR(TIM6_SR, 0))) {
+			// Wait till event
+		}
+
+		BIT_CLR_PTR(TIM6_CR1, 0); // Disable timer
+		BIT_CLR_PTR(TIM6_SR, 0);  // Disable eventflag
+		/* TIMER END */
+
+		clearPin(PIN);
+
+	}
+}
+
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  /* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */

@@ -1,0 +1,948 @@
+15:22:05 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:37:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   37 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1256	     12	   1572	   2840	    b18	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+15:22:09 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1256	     12	   1572	   2840	    b18	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+15:23:16 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:38:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   38 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	     12	   1572	   2824	    b08	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+15:35:39 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:38:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   38 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	     12	   1572	   2824	    b08	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+15:36:14 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:38:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   38 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	     12	   1572	   2824	    b08	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+15:38:21 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:41:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   41 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	     12	   1572	   2824	    b08	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+15:38:50 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:41:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   41 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	     12	   1572	   2824	    b08	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+15:39:26 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:41:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   41 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	     12	   1572	   2824	    b08	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+15:47:08 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:41:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   41 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	     12	   1572	   2824	    b08	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+15:52:35 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:41:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   41 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1244	     12	   1572	   2828	    b0c	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+15:55:29 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:41:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   41 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1240	     12	   1572	   2824	    b08	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+16:05:56 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/hal/timer-hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/hal/timer-hal.d" -MT"Core/Src/hal/timer-hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/hal/timer-hal.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/hal/timer-hal.c: In function 'milliSeconds':
+../Core/Src/hal/timer-hal.c:23:1: warning: control reaches end of non-void function [-Wreturn-type]
+   23 | }
+      | ^
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:17:3: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   17 |   setPin(PIN);
+      |   ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1180	     12	   1572	   2764	    acc	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 
+16:08:33 **** Incremental Build of configuration Debug for project Cube-led-with-timer-delay ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303x8 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/hal/pin-hal.h:14,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/pin-define.h:13: warning: "GPIOA_BASE" redefined
+   13 | #define GPIOA_BASE 0x48000000UL          // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:705: note: this is the location of the previous definition
+  705 | #define GPIOA_BASE            (AHB2PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/pin-hal.h:15,
+                 from ../Core/Src/main.c:2:
+../Core/Inc/define/reset.h:5: warning: "RCC_BASE" redefined
+    5 | #define RCC_BASE 0x40021000UL  // RM0316_Reference_manual p.57
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:696: note: this is the location of the previous definition
+  696 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x00001000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:5: warning: "TIM2_BASE" redefined
+    5 | #define TIM2_BASE 0x40000000           // RM0316_Reference_manual p.58
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:655: note: this is the location of the previous definition
+  655 | #define TIM2_BASE             (APB1PERIPH_BASE + 0x00000000UL)
+      | 
+In file included from ../Core/Inc/hal/timer-hal.h:14,
+                 from ../Core/Src/main.c:3:
+../Core/Inc/define/timer-define.h:26: warning: "TIM6_BASE" redefined
+   26 | #define TIM6_BASE 0x40001000 // p.59
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:133,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h:29,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f3xx_hal_conf.h:199,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303x8.h:657: note: this is the location of the previous definition
+  657 | #define TIM6_BASE             (APB1PERIPH_BASE + 0x00001000UL)
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:14:6: warning: implicit declaration of function 'setPin' [-Wimplicit-function-declaration]
+   14 |      setPin(PIN);
+      |      ^~~~~~
+arm-none-eabi-gcc -o "Cube-led-with-timer-delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\phili\Desktop\ITS_2020_BAC2_Microcntroller\04_STM32F303_Nucleo-32\Cube-led-with-timer-delay\STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Cube-led-with-timer-delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Cube-led-with-timer-delay.elf
+ 
+arm-none-eabi-size   Cube-led-with-timer-delay.elf 
+arm-none-eabi-objdump -h -S  Cube-led-with-timer-delay.elf  > "Cube-led-with-timer-delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1176	     12	   1572	   2760	    ac8	Cube-led-with-timer-delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Cube-led-with-timer-delay.list
+ 

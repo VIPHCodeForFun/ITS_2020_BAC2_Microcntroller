@@ -1,0 +1,10 @@
+#ifndef RESET_H_
+#define RESET_H_
+
+/*-- RESET and Clock Control RSS --*/
+#define RCC_BASE 0x40021000UL 	// RM0316_Reference_manual p.57
+#define RCC_CR (volatile uint32_t *)(RCC_BASE + 0x00000000)			// RM0316_Reference_manual p.137
+#define RCC_AHBENR (volatile uint32_t *)(RCC_BASE + 0x00000014) 	// RM0316_Reference_manual p.148
+#define RCC_APB1ENR (volatile uint32_t *)(RCC_BASE + 0x0000001C) 	// RM0316_Reference_manual p.152
+
+#endif /* RESET_H_ */

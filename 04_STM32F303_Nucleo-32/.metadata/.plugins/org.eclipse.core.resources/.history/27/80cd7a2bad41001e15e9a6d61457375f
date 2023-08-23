@@ -1,0 +1,30 @@
+#ifndef TIMER_DEFINE_H_
+#define TIMER_DEFINE_H_
+
+/*-- General-purpose timer TIM2 ! --*/
+#define TIM2_BASE 0x40000000 										// RM0316_Reference_manual p.58
+#define TIME2_CR1 (volatile uint32_t *)(TIM2_BASE + 0x00000000) 	// RM0316_Reference_manual p.647
+#define TIME2_CR2 (volatile uint32_t *)(TIM2_BASE + 0x00000003)		// RM0316_Reference_manual p.648
+// SMCR
+// DIER
+#define TIME2_SR (volatile uint32_t *)(TIM2_BASE + 0x00000010)		// RM0316_Reference_manual p.654
+// EGR
+// CCRM1
+// CCRM2
+// CCER
+#define TIM2_CNT (volatile uint32_t *)(TIM2_BASE + 0x00000024) 		// RM0316_Reference_manual p.663
+#define TIM2_PSC (volatile uint32_t *)(TIM2_BASE + 0x00000028) 		// RM0316_Reference_manual p.664
+#define TIM2_ARR (volatile uint32_t *)(TIM2_BASE + 0x0000002C) 		// RM0316_Reference_manual p.664
+#define TIM2_CCR1 (volatile uint32_t *)(TIM2_BASE + 0x00000018) 	// RM0316_Reference_manual p.656
+// CCR2
+// CCR3
+// CCR4
+// DCR
+// DMAR
+
+#define TIM6_CR1 (volatile uint32_t *)(TIM2_BASE + 0x00000000)	// TIM6/TIM7 control register 1 (TIMx_CR1) p.677
+
+
+
+
+#endif /* TIMER_DEFINE_H_ */
