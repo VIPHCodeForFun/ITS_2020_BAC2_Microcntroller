@@ -12,21 +12,23 @@
 int sloc(char *FileName);
 void removeSpaces(char *str);
 
-int main() {
-  int countSLOC[] = {sloc("pin-hal.c"), sloc("timer-hal.c"), sloc("pwm-hal.c")};
+int main()
+{
+  int countSLOC[] = {sloc("pin-hal.c"), sloc("timer-hal.c")};
   printf("SLOC of pin-hal.c        %d\n", countSLOC[0]);
   printf("SLOC of von timer-hal.c  %d\n", countSLOC[1]);
-  printf("SLOC of von pwm-hal.c    %d\n", countSLOC[2]);
-  printf("                  SUM()= %d\n",
-         (countSLOC[0] + countSLOC[1] + countSLOC[2]));
+  printf("                  SUM()= %d\n", (countSLOC[0] + countSLOC[1]));
   return 0;
 }
 
-void removeSpaces(char *str) {
+void removeSpaces(char *str)
+{
   int i, j = 0;
 
-  for (i = 0; i < strlen(str); i++) {
-    if (str[i] == ' ' || str[i] == '\t') {
+  for (i = 0; i < strlen(str); i++)
+  {
+    if (str[i] == ' ' || str[i] == '\t')
+    {
       continue;
     }
     str[j] = str[i];
@@ -35,9 +37,11 @@ void removeSpaces(char *str) {
   str[j] = '\0';
 }
 
-int sloc(char *FileName) {
+int sloc(char *FileName)
+{
   FILE *file = fopen(FileName, "r");
-  if (file == NULL) {
+  if (file == NULL)
+  {
     printf("Error when opening the file\n");
     return 1;
   }
@@ -46,33 +50,41 @@ int sloc(char *FileName) {
   char string[1024];
   int lineCount = 0;
 
-  while (fgets(line, sizeof(line), file)) {
+  while (fgets(line, sizeof(line), file))
+  {
     /* Check for Error */
-    if (line == NULL) {
+    if (line == NULL)
+    {
       continue;
     }
     strcpy(string, line);
     removeSpaces(string);
-    printf("- %s", string);
+
     /* Blank line, skip */
-    if (string[0] == '\n') {
+    if (string[0] == '\n')
+    {
       continue;
     }
     /* Single line comment, skip like // some text */
-    else if (string[0] == '/' && string[1] == '/') {
+    else if (string[0] == '/' && string[1] == '/')
+    {
       continue;
     }
     /* Single line comment, skip like this one */
-    else if (strstr(string, "/*") != NULL && strstr(string, "*/") != NULL) {
+    else if (strstr(string, "/*") != NULL && strstr(string, "*/") != NULL)
+    {
       continue;
     }
     /* Multiline comment,skip like: */
     /*
      * timer_hal.c
      */
-    else if (strstr(string, "/*") != NULL && strstr(string, "*/") == NULL) {
-      while (fgets(line, sizeof(line), file)) {
-        if (strstr(line, "*/") != NULL) {
+    else if (strstr(string, "/*") != NULL && strstr(string, "*/") == NULL)
+    {
+      while (fgets(line, sizeof(line), file))
+      {
+        if (strstr(line, "*/") != NULL)
+        {
           break;
         }
       }
